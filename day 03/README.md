@@ -6,6 +6,7 @@ This folder focuses on beginner-friendly number operations using arithmetic, loo
 
 - `01_sum_of_digits.py` — calculate the sum of all digits in a number
 - `02_reverse_number.py` — reverse the digits of a number
+- `03_armstrong_number.py` — check whether a number is an Armstrong number
 
 ---
 
@@ -106,6 +107,34 @@ Each iteration extracts the last digit and appends it to the reverse result whil
 
 ---
 
+## 3. `03_armstrong_number.py`
+
+### Problem
+Write a Python program to check whether a given number is an Armstrong number.
+
+### Approach: Sum of each digit raised to the power of the number of digits
+An Armstrong number is a number whose digits, when each is raised to the power of the total number of digits, sum to the original value.
+
+- `str(number)` converts the number to a string so you can count digits.
+- A loop runs through each digit.
+- Each digit is raised to the power of `len(str(number))`.
+- The result is added and compared with the original number.
+
+#### Example
+```python
+Enter a number to check Armstrong number: = 153
+153 is an Armstrong number
+```
+
+#### Why this works
+For `153`, the digits are `1`, `5`, and `3`, and `1^3 + 5^3 + 3^3 = 153`. This matches the original value, so it is an Armstrong number.
+
+#### Time complexity
+- Time: O(n)
+- Space: O(1)
+
+---
+
 ## Learning Goals for Day 03
 
 By the end of this day, you should be able to:
@@ -115,6 +144,7 @@ By the end of this day, you should be able to:
 - understand modulo and integer division
 - solve number-based interview problems efficiently
 - compare multiple approaches to the same problem in Python
+- recognize and validate Armstrong numbers
 
 ## Running the Scripts
 
@@ -123,6 +153,7 @@ From the repository root, use the following commands:
 ```bash
 python "day 03/01_sum_of_digits.py"
 python "day 03/02_reverse_number.py"
+python "day 03/03_armstrong_number.py"
 ```
 
 ---
