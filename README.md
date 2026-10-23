@@ -36,7 +36,8 @@ This repository contains daily Python exercises designed to improve core program
 ├── day 03/
 │   ├── README.md
 │   ├── 01_sum_of_digits.py
-│   └── 02_reverse_number.py
+│   ├── 02_reverse_number.py
+│   └── 03_armstrong_number.py
 └── LICENSE (if added in the future)
 ```
 
@@ -44,7 +45,7 @@ This repository contains daily Python exercises designed to improve core program
 
 - [Day 01](./day%2001/README.md) — basic logic and number/string operations
 - [Day 02](./day%2002/README.md) — string processing and list-based problem solving
-- [Day 03](./day%2003/README.md) — number manipulation and digit-based logic
+- [Day 03](./day%2003/README.md) — number manipulation, digit-based logic, and Armstrong numbers
 
 ## How to Run
 
@@ -54,6 +55,7 @@ Open any folder and execute the Python script:
 python "day 01/01_even_odd.py"
 python "day 02/01_reverse_string.py"
 python "day 03/01_sum_of_digits.py"
+python "day 03/03_armstrong_number.py"
 ```
 
 ## Learning Focus
