@@ -13,6 +13,7 @@ This repository contains daily Python exercises designed to improve core program
 - list operations
 - basic algorithmic thinking
 - validation and error handling
+- number-based logic and digit processing
 
 ## Project Structure
 
@@ -32,6 +33,10 @@ This repository contains daily Python exercises designed to improve core program
 │   ├── 03_largest_number.py
 │   ├── 04_remove_duplicates.py
 │   └── 05_character_frequency.py
+├── day 03/
+│   ├── README.md
+│   ├── 01_sum_of_digits.py
+│   └── 02_reverse_number.py
 └── LICENSE (if added in the future)
 ```
 
@@ -39,6 +44,7 @@ This repository contains daily Python exercises designed to improve core program
 
 - [Day 01](./day%2001/README.md) — basic logic and number/string operations
 - [Day 02](./day%2002/README.md) — string processing and list-based problem solving
+- [Day 03](./day%2003/README.md) — number manipulation and digit-based logic
 
 ## How to Run
 
@@ -46,6 +52,8 @@ Open any folder and execute the Python script:
 
 ```bash
 python "day 01/01_even_odd.py"
+python "day 02/01_reverse_string.py"
+python "day 03/01_sum_of_digits.py"
 ```
 
 ## Learning Focus
@@ -57,6 +65,7 @@ Each challenge is created to reinforce:
 - writing efficient logic
 - handling invalid input gracefully
 - checking outputs with examples
+- solving practical coding interview problems step by step
 
 ---
 
