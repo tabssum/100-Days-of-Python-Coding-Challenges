@@ -14,47 +14,93 @@ This folder focuses on beginner-friendly number operations using arithmetic, loo
 ### Problem
 Write a Python program to calculate the sum of all digits in a given integer.
 
-### Implementation details
-- The program reads an integer using `input()`.
-- It converts the number to a string and iterates through each character.
-- Each digit is converted back to an integer and added to a running total.
-- An alternative approach uses a `while` loop with `% 10` and `// 10` to repeatedly isolate digits.
+### Approach 1: String conversion + loop
+The first implementation converts the integer into a string and then iterates through each character.
 
-### Example
+- `str(number)` turns the number into a readable sequence of digits.
+- A `for` loop visits every character one by one.
+- Each character is converted back to `int` and appended to a list.
+- `sum(digit_lst)` calculates the total.
+
+#### Example
 ```python
 Enter a number to find its digits sum: = 12345
 Sum of digits of a number 12345 is := 15
 ```
 
-### Why this works
-The digits of a number can be processed one at a time. By repeatedly extracting the last digit using modulo and then removing it with integer division, the program can add every digit efficiently.
+#### Why this works
+Each digit in a number is a single character. By converting the number to text, we can process each digit in order and add them together.
 
-### Time complexity
+#### Time complexity
 - Time: O(n)
-- Space: O(n) in the string-based approach
+- Space: O(n)
+
+### Approach 2: Modulo and integer division
+The second implementation avoids converting the number to a string and instead uses mathematical operations.
+
+- `digit = number % 10` extracts the last digit.
+- `sum_of_digits += digit` adds it to the result.
+- `number = number // 10` removes the last digit from the number.
+- The loop continues until the number becomes `0`.
+
+#### Example
+```python
+Enter a number to find its digits sum: = 12345
+Sum of digits of a number 12345 is := 15
+```
+
+#### Why this works
+Repeatedly taking the remainder by 10 gives the rightmost digit, while integer division removes that digit. This is a classic technique for working with digits in numeric form.
+
+#### Time complexity
+- Time: O(n)
+- Space: O(1)
 
 ---
 
 ## 2. `02_reverse_number.py`
 
 ### Problem
-Write a Python program to reverse the digits of a given integer without converting it into a string.
+Write a Python program to reverse the digits of a given integer.
 
-### Implementation details
-- The program reads an integer from the user.
-- One solution uses string slicing with `[::-1]` to reverse the digits.
-- Another approach uses a `while` loop, `% 10`, and `// 10` to rebuild the reversed number.
+### Approach 1: String slicing
+The first solution converts the number to a string and reverses it using slicing.
 
-### Example
+- `str(number)` converts the integer to text.
+- `[:: -1]` reverses the string in a single operation.
+- The result is printed as the reversed number.
+
+#### Example
 ```python
 Enter a number to reverse it : = 1234
 Reversed number of a number 1234 is := 4321
 ```
 
-### Why this works
-When a number is divided by 10, the last digit is isolated. By multiplying the reversed result by 10 and adding the extracted digit repeatedly, the original digits are reordered in reverse.
+#### Why this works
+Python string slicing with a negative step walks backward through the value, so a number like `1234` becomes `4321` efficiently and clearly.
 
-### Time complexity
+#### Time complexity
+- Time: O(n)
+- Space: O(n)
+
+### Approach 2: While loop with modulo and division
+The second implementation keeps the number as an integer and rebuilds the reversed value step by step.
+
+- `digit = number % 10` extracts the last digit.
+- `reversed_number = reversed_number * 10 + digit` adds the digit to the reverse result.
+- `number = number // 10` removes the last digit from the original value.
+- The loop repeats until the original number is fully processed.
+
+#### Example
+```python
+Enter a number to reverse it:= 1234
+Reversed number of a number 1234 is := 4321
+```
+
+#### Why this works
+Each iteration extracts the last digit and appends it to the front of the reversed number by shifting the current reversed value left by one decimal place. This preserves the digits in reverse order without converting to a string.
+
+#### Time complexity
 - Time: O(n)
 - Space: O(1)
 
@@ -67,7 +113,7 @@ By the end of this day, you should be able to:
 - use `while` loops for repetitive numeric logic
 - understand modulo and integer division
 - solve number-based interview problems efficiently
-- build confidence in writing clear logic-based Python programs
+- compare multiple approaches to the same problem in Python
 
 ## Running the Scripts
 
