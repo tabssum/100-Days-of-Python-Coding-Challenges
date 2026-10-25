@@ -1,19 +1,19 @@
 # 100-Days-of-Python-Coding-Challenges
 
-A practical Python coding challenge repository focused on interview-style problem solving, daily logic building, and clean Python implementations.
+A practical Python practice repository focused on interview-style problem solving, daily logic building, and clean, readable implementations.
 
 ## Repository Overview
 
-This repository contains daily Python exercises designed to improve core programming skills such as:
+This repository contains daily Python exercises designed to improve essential programming skills such as:
 
 - input/output handling
 - conditional statements
 - loops and iteration
 - string manipulation
-- list operations
+- list and dictionary operations
+- number-based logic and digit processing
 - basic algorithmic thinking
 - validation and error handling
-- number-based logic and digit processing
 
 ## Project Structure
 
@@ -37,19 +37,21 @@ This repository contains daily Python exercises designed to improve core program
 │   ├── README.md
 │   ├── 01_sum_of_digits.py
 │   ├── 02_reverse_number.py
-│   └── 03_armstrong_number.py
+│   ├── 03_armstrong_number.py
+│   ├── 04_element_frequency.py
+│   └── 05_second_largest.py
 └── LICENSE (if added in the future)
 ```
 
 ## Daily Challenges
 
-- [Day 01](./day%2001/README.md) — basic logic and number/string operations
-- [Day 02](./day%2002/README.md) — string processing and list-based problem solving
-- [Day 03](./day%2003/README.md) — number manipulation, digit-based logic, and Armstrong numbers
+- [Day 01](./day%2001/README.md) — basic logic, number checks, and simple Python problem solving
+- [Day 02](./day%2002/README.md) — string processing, list manipulation, and frequency-based logic
+- [Day 03](./day%2003/README.md) — number manipulation, digit operations, and algorithmic problem solving
 
 ## How to Run
 
-Open any folder and execute the Python script:
+Open any folder and run the Python script:
 
 ```bash
 python "day 01/01_even_odd.py"
@@ -60,14 +62,14 @@ python "day 03/03_armstrong_number.py"
 
 ## Learning Focus
 
-Each challenge is created to reinforce:
+Each challenge is designed to reinforce:
 
 - writing readable Python code
-- understanding problem statements
-- writing efficient logic
+- understanding problem statements clearly
+- developing efficient logic
 - handling invalid input gracefully
 - checking outputs with examples
-- solving practical coding interview problems step by step
+- solving practical interview-style problems step by step
 
 ---
 
