@@ -9,3 +9,11 @@ Expected output: [3, 4]
 
 Concepts: Lists, sets, membership operators
 """
+lst_input_1 = list(map(int, input("Enter a list of elements := ").split()))
+lst_input_2 = list(map(int, input("Enter a list of elements := ").split()))
+
+result=[]
+
+result=list(set(lst_input_1).intersection(set(lst_input_2)))
+
+print(f"Common elements: {result}")
