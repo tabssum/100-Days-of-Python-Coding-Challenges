@@ -1,12 +1,14 @@
 # Day 03: Number Manipulation and Digit-Based Challenges
 
-This folder focuses on beginner-friendly number operations using arithmetic, loops, and digit-by-digit processing. These challenges help build logic skills and strengthen understanding of common interview-style tasks involving integers.
+This folder focuses on beginner-friendly number operations using arithmetic, loops, and digit-by-digit processing. These challenges help build logic skills and strengthen understanding of common interview-style Python problems involving numbers, lists, and data counting.
 
 ## Folder Contents
 
 - `01_sum_of_digits.py` — calculate the sum of all digits in a number
 - `02_reverse_number.py` — reverse the digits of a number
 - `03_armstrong_number.py` — check whether a number is an Armstrong number
+- `04_element_frequency.py` — count how often each element appears in a list
+- `05_second_largest.py` — find the second-largest distinct number in a list
 
 ---
 
@@ -99,7 +101,7 @@ Reversed number of a number 1234 is := 4321
 ```
 
 #### Why this works
-Each iteration extracts the last digit and appends it to the reverse result while shifting the current reversed value left by one decimal place. This preserves the digits in reverse order without converting the value to a string.
+Each iteration extracts the last digit and appends it to the reverse result while shifting the current reversed value left by one decimal place. This preserves the digits in reverse order without using string conversion.
 
 #### Time complexity
 - Time: O(n)
@@ -135,6 +137,58 @@ For `153`, the digits are `1`, `5`, and `3`, and `1^3 + 5^3 + 3^3 = 153`. This m
 
 ---
 
+## 4. `04_element_frequency.py`
+
+### Problem
+Write a Python program to count how many times each element appears in a list and store the results in a dictionary.
+
+### Implementation details
+- The input is read as a list of space-separated values.
+- `set(ele_lst)` removes duplicate entries so the loop processes unique values only.
+- `ele_lst.count(ele)` counts how many times each value appears.
+- The result is stored in a dictionary where the key is the element and the value is its frequency.
+
+#### Example
+```python
+Enter a list of numbers to count its frequency : = 1 2 2 3 1 2
+Frequency of each element in a list is := {'1': 2, '2': 3, '3': 1}
+```
+
+#### Why this works
+A dictionary maps each unique element to its count. By iterating through unique values and counting occurrences in the original list, we can build a frequency table efficiently and clearly.
+
+#### Time complexity
+- Time: O(n^2) in this implementation because `count()` is called for each unique value
+- Space: O(n)
+
+---
+
+## 5. `05_second_largest.py`
+
+### Problem
+Write a Python program to find the second-largest distinct number in a list without using `sort()` or `sorted()`.
+
+### Implementation details
+- `lst_input = list(map(int, input(...).split()))` converts the user input into integers.
+- `unique_ele = list(set(lst_input))` removes duplicates and keeps only distinct values.
+- If there are fewer than two distinct values, the program prints a friendly message.
+- Otherwise, it finds the largest value, removes it, and then finds the maximum remaining value.
+
+#### Example
+```python
+Enter elements list to find second largest number : = 10 5 8 10 7
+Second-largest number: 8
+```
+
+#### Why this works
+The largest distinct value is removed from the set, leaving the second-largest value as the new maximum. This avoids sorting while still correctly handling duplicates and edge cases.
+
+#### Time complexity
+- Time: O(n)
+- Space: O(n)
+
+---
+
 ## Learning Goals for Day 03
 
 By the end of this day, you should be able to:
@@ -145,6 +199,8 @@ By the end of this day, you should be able to:
 - solve number-based interview problems efficiently
 - compare multiple approaches to the same problem in Python
 - recognize and validate Armstrong numbers
+- count frequencies in lists using dictionaries
+- identify the second-largest distinct element in a collection
 
 ## Running the Scripts
 
@@ -154,8 +210,10 @@ From the repository root, use the following commands:
 python "day 03/01_sum_of_digits.py"
 python "day 03/02_reverse_number.py"
 python "day 03/03_armstrong_number.py"
+python "day 03/04_element_frequency.py"
+python "day 03/05_second_largest.py"
 ```
 
 ---
 
-These exercises strengthen core Python fundamentals by focusing on arithmetic operations, loops, and practical number-processing patterns.
+These exercises strengthen core Python fundamentals by focusing on arithmetic operations, loops, list processing, dictionary counting, and practical number-based problem solving.
