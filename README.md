@@ -40,6 +40,13 @@ This repository contains daily Python exercises designed to improve essential pr
 │   ├── 03_armstrong_number.py
 │   ├── 04_element_frequency.py
 │   └── 05_second_largest.py
+├── day 04/
+│   ├── README.md
+│   ├── 01_move_zeros.py
+│   ├── 02_common_elements.py
+│   ├── 03_first_non_repeating_character.py
+│   ├── 04_anagram_checker.py
+│   └── 05_missing_number.py
 └── LICENSE (if added in the future)
 ```
 
@@ -48,6 +55,7 @@ This repository contains daily Python exercises designed to improve essential pr
 - [Day 01](./day%2001/README.md) — basic logic, number checks, and simple Python problem solving
 - [Day 02](./day%2002/README.md) — string processing, list manipulation, and frequency-based logic
 - [Day 03](./day%2003/README.md) — number manipulation, digit operations, and algorithmic problem solving
+- [Day 04](./day%2004/README.md) — list and string challenges, frequency counting, and pattern-based problem solving
 
 ## How to Run
 
@@ -57,7 +65,8 @@ Open any folder and run the Python script:
 python "day 01/01_even_odd.py"
 python "day 02/01_reverse_string.py"
 python "day 03/01_sum_of_digits.py"
-python "day 03/03_armstrong_number.py"
+python "day 04/01_move_zeros.py"
+python "day 04/04_anagram_checker.py"
 ```
 
 ## Learning Focus
